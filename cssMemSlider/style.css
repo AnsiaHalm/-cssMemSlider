@@ -15,7 +15,12 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+@media (max-width: 480px) {
+    .wrapper{
+        height: 100%;
+        width: 70vw;
+    }
+}
 input{
     margin: 0;
     padding: 0;
@@ -32,7 +37,12 @@ input{
     display: flex;
     transition: width ease-in-out 0.4s;
 }
-
+@media (max-width: 480px) {
+    .slide{
+        height: 70vw;
+        width: 70vw;
+    }
+}
 .slide1 {
     margin: 0;
     padding: 0;
@@ -58,20 +68,39 @@ input{
     height: auto;
     width: 60vh;
 }
-
+@media (max-width: 480px) {
+    .slide img{
+        height: auto;
+        width: 70vw;
+    }
+}
 .quote-controls{
     margin: 4vh 0;
     display: flex;
     justify-content: space-between;
 }
-
+@media (max-width: 480px) {
+    .quote-controls{
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: none;
+    }
+}
 .quote{
     margin: 0;
     padding: 0;
     display: flex;
     width: calc( 50vh - 7rem );
 }
-
+@media (max-width: 480px) {
+    .quote{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        width: 100%;
+    }
+}
 .slider-q {
     margin: 0;
     padding: 0;
@@ -109,7 +138,11 @@ input{
     width: 6.3rem;
     justify-content: space-around;
 }
-
+@media (max-width: 480px) {
+    .controls{
+        margin: 5vw auto;
+    }
+}
 .controls label {
     width: 1.2rem;
     height: 1.2rem;
@@ -142,7 +175,6 @@ input{
     background: radial-gradient(#5be3ec,#3c4045,#3c4045,#3c4045);
     box-shadow: -0.4rem -0.4rem 0.4rem -0.4rem rgba(255, 255, 255, 0.6) inset, 0.4rem 0.4rem 0.4rem -0.4rem rgba(35, 38, 41, 0.6) inset;
 }
-
 #r-btn1:checked ~ .slider > .slide1,
 #r-btn2:checked ~ .slider > .slide2,
 #r-btn3:checked ~ .slider > .slide3,
@@ -156,4 +188,21 @@ input{
     animation: q 1s linear;
     opacity: 1;
     width: 100%;
+}
+@media (max-width: 480px) {
+    #r-btn1:checked ~ .quote-controls > .quote > .quote1,
+    #r-btn2:checked ~ .quote-controls > .quote > .quote2,
+    #r-btn3:checked ~ .quote-controls > .quote > .quote3,
+    #r-btn4:checked ~ .quote-controls > .quote > .quote4{
+        animation: q 1s linear;
+        opacity: 1;
+        width: 100%;
+}}
+@keyframes q{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
