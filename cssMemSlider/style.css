@@ -142,3 +142,18 @@ input{
     background: radial-gradient(#5be3ec,#3c4045,#3c4045,#3c4045);
     box-shadow: -0.4rem -0.4rem 0.4rem -0.4rem rgba(255, 255, 255, 0.6) inset, 0.4rem 0.4rem 0.4rem -0.4rem rgba(35, 38, 41, 0.6) inset;
 }
+
+#r-btn1:checked ~ .slider > .slide1,
+#r-btn2:checked ~ .slider > .slide2,
+#r-btn3:checked ~ .slider > .slide3,
+#r-btn4:checked ~ .slider > .slide4{
+    width: 100%;
+}
+#r-btn1:checked ~ .quote-controls > .quote > .quote1,
+#r-btn2:checked ~ .quote-controls > .quote > .quote2,
+#r-btn3:checked ~ .quote-controls > .quote > .quote3,
+#r-btn4:checked ~ .quote-controls > .quote > .quote4{
+    animation: q 1s linear;
+    opacity: 1;
+    width: 100%;
+}
