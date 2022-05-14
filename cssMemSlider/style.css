@@ -121,3 +121,24 @@ input{
     box-shadow: 0rem 0rem 0.2rem 0.01rem rgba(35, 38, 41, 0.6) ;
     transition: background-color  box-shadow ease-in-out 0.5s;
 }
+.area{
+    min-width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+.controls label:hover {
+    background: radial-gradient(#43acb4,#3c4045,#3c4045);
+    box-shadow: 0rem 0rem 0.2rem 0.1rem rgba(35, 38, 41, 0.6) inset;
+}
+.controls label:active {
+    background: radial-gradient(#43acb4,#3c4045);
+    box-shadow: 0rem 0rem 0.2rem 0.1rem rgba(35, 38, 41, 0.6) ;
+}
+#r-btn1:checked ~ .quote-controls > .controls > label:nth-of-type(1),
+#r-btn2:checked ~ .quote-controls > .controls > label:nth-of-type(2),
+#r-btn3:checked ~ .quote-controls > .controls > label:nth-of-type(3),
+#r-btn4:checked ~ .quote-controls > .controls > label:nth-of-type(4){
+    background: radial-gradient(#5be3ec,#3c4045,#3c4045,#3c4045);
+    box-shadow: -0.4rem -0.4rem 0.4rem -0.4rem rgba(255, 255, 255, 0.6) inset, 0.4rem 0.4rem 0.4rem -0.4rem rgba(35, 38, 41, 0.6) inset;
+}
